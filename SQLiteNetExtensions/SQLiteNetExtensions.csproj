@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
+    <PackageId>SQLiteNetExtensionsCore</PackageId>
+    <Authors>JamSoft</Authors>
+    <Company>JamSoft</Company>
+    <Product>SQLiteNetExtensionsCore</Product>
+    <Description>SQLite-Net Extensions is a very simple ORM that provides cascade operations, one-to-one, one-to-many, many-to-one, many-to-many, inverse and text-blobbed relationships on top of the sqlite-net library.</Description>
+    <PackageTags>sqlite sqlite-net netstandard extensions orm cascade recursive</PackageTags>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/jamsoft/SQLiteExtensionsCore/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jamsoft/SQLiteExtensionsCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jamsoft/SQLiteExtensionsCore</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
