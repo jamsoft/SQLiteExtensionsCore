@@ -2,13 +2,13 @@
 
 This is currently just a direct recompile of the original code from twin coders SQLite Net Extensions providing support for entity relationships and async operations.
 
-I have some plans to incorporate more classes for making the consumption a little easier but that will come in a later version.  I will also be updating the solution to pull over all the unit tests and integration tests.
+I have some plans to incorporate more classes for making the consumption a little easier but that will come in a later version.  I will also be updating the solut
 
 This is also available as a NuGet package on nuget.org at the following location:
 
 
 
-# SQLite-Net Extensions
+# SQLite-Net Extensions Original Package Info
 
 [SQLite-Net Extensions](https://bitbucket.org/twincoders/sqlite-net-extensions) is a very simple ORM that provides **one-to-one**, **one-to-many**, **many-to-one**, **many-to-many**, **inverse** and **text-blobbed** relationships on top of the [sqlite-net library](https://github.com/praeclarum/sqlite-net).
 
@@ -29,25 +29,12 @@ Complementarily `UpdateWithChildren` looks at the relationships that you have se
 You can update foreign keys manually if you feel more comfortable handling some relationships by yourself and let the SQLite-Net extensions handle the rest for you. You can even add or remove SQLite-Net extensions of any project at any time without changes to your database.
 
 ## Installation
-The easiest way of installing the library in your project is adding a reference to [_SQLiteNetExtensions_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensions/) or [_SQLiteNetExtensions.Async_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensions.Async/) for asynchronous operations.
-
-SQLite-Net Extensions is provided in three different flavours, depending on the SQLite-Net version that you are using:
-
-- [SQLite-Net PCL](https://github.com/oysteinkrog/SQLite.Net-PCL) version (also as [NuGet package](https://www.nuget.org/packages/SQLite.Net-PCL/))
-- [SQLite.Net.Async-PCL](https://github.com/oysteinkrog/SQLite.Net-PCL) version (also as [NuGet package](https://www.nuget.org/packages/SQLite.Net.Async-PCL/))
-- [MvvmCross SQLite Community](https://github.com/MvvmCross/MvvmCross-SQLite PCL) version (also as [NuGet package](https://www.nuget.org/packages/MvvmCross.Community.Plugin.Sqlite/))
-- [SQLite-Net standard](https://github.com/praeclarum/sqlite-net) version (also as [NuGet package](https://www.nuget.org/packages/sqlite-net))
-
-Currently the recommended version is the official SQLite-Net PCL NuGet package. If you are using this SQLite-Net version, you can simply add a reference to [_SQLiteNetExtensions_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensions/). Also available with Async support in [_SQLiteNetExtensions.Async_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensions.Async/).
-
-There's also [a PCL NuGet package](https://www.nuget.org/packages/SQLiteNetExtensions-MvvmCross/) for users of MvvmCross SQLite Community plugin.
-
-Otherwise, you can download and compile the sources by yourself and add the reference to your newly compiled DLL or add SQLite-Net Extensions project as a dependency to your code.
+The easiest way of installing the library in your project is adding a reference to [_SQLiteNetExtensions_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensionsCore/) or [_SQLiteNetExtensions.Async_ NuGet package](https://www.nuget.org/packages/SQLiteNetExtensionsCore.Async/) for asynchronous operations.
 
 ## Get help
 The best way to get help is searching [StackOverflow](http://stackoverflow.com) for already existing answers of your problem or asking your own question and tagging it with [`sqlite-net-extensions` tag](http://stackoverflow.com/questions/tagged/sqlite-net-extensions).
 
-If you find a bug or have a suggestion or feature request. Feel free to create a new ticket in the [issue tracker](https://bitbucket.org/twincoders/sqlite-net-extensions/issues?status=new&status=open) if it doesn't already exist.
+If you find a bug or have a suggestion or feature request. Feel free to create a new ticket in the [issue tracker](https://github.com/jamsoft/SQLiteExtensionsCore/issues) if it doesn't already exist.
 
 
 ## Some code
@@ -325,21 +312,3 @@ Because of *many-to-many* and *many-to-one* relationships inverse may reference 
 When you call to `UpdateWithChildren` method, it refreshes all the foreign keys based on the current relationships (including the inverse relationships), and stores the changes in the database. But if you remove a reference to an object, there's no way for SQLite-Net Extensions to know that you have an object in memory that wasn't referenced before. If you later call to `UpdateWithChildren` to the referenced object, you may find that the removed reference is unintentionally restored.
 
 To keep a reference to the removed object it's recommended to reload the referenced object from the database.
-
-## I want [moar](http://slappersonly.com/wordpress/wp-content/uploads/2013/02/moar.jpg)!!
-I'd really recommend you to take a look at the Integration Tests project as it covers most of the use cases and contains lots of code. They are packed into a Xamarin.iOS project using NUnit Lite. Run it as a normal Xamarin.iOS App to execute the tests.
-
-> Those are my principles. If you don't like them I have others.
-
-
-We'd like to hear from you. Don't hesitate in contacting us for suggestions, feature requests, bug reports or anything you need.
-
-## License
-
-Copyright (C) 2013 TwinCoders S.L.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
