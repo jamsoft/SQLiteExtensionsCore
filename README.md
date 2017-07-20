@@ -2,7 +2,7 @@
 
 This is currently just a direct recompile of the original code from twin coders SQLite Net Extensions providing support for entity relationships and async operations.
 
-I have some plans to incorporate more classes for making the consumption a little easier but that will come in a later version.  I will also be updating the solut
+I have some plans to incorporate more classes for making the consumption a little easier but that will come in a later version.  I will also be updating the solution to incorporate the tests at a later date.
 
 This is also available as a NuGet package on nuget.org at the following location:
 
